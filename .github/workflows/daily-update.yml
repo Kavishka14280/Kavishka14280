@@ -1,1 +1,27 @@
+name: Daily Auto Commit
 
+on:
+  schedule:
+    - cron: '0 0 * * *' # හැමදාම ලංකාවේ වෙලාවෙන් පාන්දර 5:30ට විතර වැඩේ වෙයි
+  workflow_dispatch: # ඔයාට ඕන වෙලාවක manually run කරන්නත් පුළුවන්
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # මේක අනිවාර්යයෙන්ම ඕනේ push කරන්න
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Update Daily Log
+        run: |
+          echo "System Secure. Last Check: $(date)" > daily_log.txt
+
+      - name: Commit and Push
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add daily_log.txt
+          git commit -m "Security System Check: $(date)"
+          git push
