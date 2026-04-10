@@ -1,4 +1,4 @@
-# ⚡ [SYSTEM_INITIALIZED]: KAVISHKA_WICKRAMA
+# ⚡ [SYSTEM_INITIALIZED]: KAVISHKA_WICKRAMAARACHCHI
 
 <p align="center">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=00FF41&center=true&vCenter=true&width=435&lines=Software+Engineer;Cyber+Security+Researcher;Full+Stack+Developer;Penetration+Tester+in+Training" alt="Typing SVG" />
